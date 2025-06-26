@@ -1,0 +1,11 @@
+meta {
+  name: documents
+  type: http
+  seq: 1
+}
+
+get {
+  url: http://{{host}}:{{port}}/documents
+  body: none
+  auth: inherit
+}
