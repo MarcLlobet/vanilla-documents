@@ -13,14 +13,19 @@
     "server": "cd server && go run server.go",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "prepare": "husky || true"
+    "prepare": "husky || true",
+    "test": "vitest",
+    "coverage": "vitest --coverage"
   },
   "devDependencies": {
     "@eslint/js": "^9.29.0",
     "@storybook/html-vite": "^9.0.13",
+    "@types/node": "^24.0.7",
+    "@vitest/coverage-v8": "3.2.4",
     "eslint": "^9.29.0",
     "eslint-config-prettier": "^10.1.5",
     "jiti": "^2.4.2",
+    "jsdom": "^26.1.0",
     "prettier": "^3.6.1",
     "storybook": "^9.0.13",
     "typescript": "~5.8.3",
@@ -28,6 +33,7 @@
     "vite": "^7.0.0"
   },
   "dependencies": {
-    "husky": "^9.1.7"
+    "husky": "^9.1.7",
+    "vitest": "^3.2.4"
   }
 }
