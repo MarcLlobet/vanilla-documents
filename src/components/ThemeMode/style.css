@@ -1,0 +1,42 @@
+.darkMode {
+  border-radius: 50%;
+  padding: 0;
+  line-height: 0;
+  cursor: pointer;
+  background: var(--key-color);
+  color: #fff;
+  fill: #fff;
+  width: 3rem;
+  height: 3rem;
+  border: 0;
+}
+
+.darkMode:hover {
+  background: var(--highlight-color);
+  transition: background 0.2s;
+}
+
+.colorSlider {
+  width: 80px;
+}
+
+.colorSlider::-webkit-slider-runnable-track {
+  background: var(--highlight-color);
+  height: 0.5rem;
+  top: 1rem;
+  appearance: none;
+}
+.colorSlider::-webkit-slider-thumb {
+  background: var(--highlight-color);
+  fill: var(--highlight-color);
+  color: var(--highlight-color);
+  cursor: pointer;
+  margin-top: -0.3rem;
+}
+
+.colorSlider::-moz-range-track {
+  background: var(--highlight-color);
+  height: 0.5rem;
+  top: 1rem;
+  appearance: none;
+}

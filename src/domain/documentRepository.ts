@@ -9,5 +9,7 @@ export interface DocumentNotification {
 }
 
 export interface NotificationService {
-  onNewDocument(callback: (notification: DocumentNotification) => void): void;
+  onNewDocument(_callback: (_notification: DocumentNotification) => void): void;
 }
+
+export {};

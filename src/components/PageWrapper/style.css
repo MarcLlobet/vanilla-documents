@@ -1,0 +1,17 @@
+.vd-page-wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  width: 100%;
+  gap: 1rem;
+}
+
+.vd-page-wrapper--left {
+  justify-content: flex-start;
+}
+.vd-page-wrapper--center {
+  justify-content: center;
+}
+.vd-page-wrapper--right {
+  justify-content: flex-end;
+}

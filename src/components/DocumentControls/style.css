@@ -1,0 +1,48 @@
+.vd-doc__header {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.vd-doc__header-group {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+}
+.vd-doc-list__sort {
+  display: flex;
+  flex-direction: row;
+  gap: 0.2rem;
+}
+.vd-doc-list__sort-label {
+}
+.vd-doc-list__sort-input {
+}
+
+.vd-doc__header-button {
+  cursor: pointer;
+  background: var(--key-color);
+  color: var(--key-color-text);
+  fill: var(--key-color-text);
+  border-radius: 4px;
+  border: 1.5px solid var(--key-color);
+  transition:
+    border 0.1s,
+    background 0.1s;
+  height: 1.5rem;
+  width: 1.5rem;
+  padding: 0.2rem;
+}
+
+.vd-doc__header-button:disabled {
+  pointer-events: none;
+}
+
+.vd-doc__header-button:hover {
+  background: var(--highlight-color);
+  border-color: var(--highlight-color);
+}
+
+.vd-doc__header-button--active {
+  background: var(--highlight-color);
+  border-color: var(--highlight-color);
+}

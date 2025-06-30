@@ -1,0 +1,9 @@
+.vd-header {
+  padding: 2rem 0;
+  margin: 0;
+}
+
+.vd-title {
+  justify-content: flex-start;
+  margin: 0;
+}

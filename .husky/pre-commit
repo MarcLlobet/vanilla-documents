@@ -1,0 +1,3 @@
+yarn prettier --write .
+yarn eslint . --fix
+yarn ts:check

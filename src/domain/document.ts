@@ -1,9 +1,8 @@
-export interface Contributor {
+export type Contributor = {
   ID: string;
   Name: string;
-}
-
-export interface Document {
+};
+export type Document = {
   ID: string;
   Title: string;
   Version: string;
@@ -11,11 +10,11 @@ export interface Document {
   UpdatedAt: string;
   Attachments: string[];
   Contributors: Contributor[];
-}
+};
 
 export interface DocumentRepository {
   getAll(): Promise<Document[]>;
-  add(document: Document): Promise<void>;
+  add(_document: Document): Promise<void>;
 }
 
 export {};

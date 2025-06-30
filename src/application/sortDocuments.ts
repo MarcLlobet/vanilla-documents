@@ -14,9 +14,9 @@ export function sortDocuments(
     if (key === "Version") {
       return compareVersions(a.Version, b.Version);
     }
-    if (key === "CreatedAt") {
-      const d1 = new Date(a.CreatedAt);
-      const d2 = new Date(b.CreatedAt);
+    if (key === "UpdatedAt") {
+      const d1 = new Date(a.UpdatedAt);
+      const d2 = new Date(b.UpdatedAt);
       return d1.getTime() - d2.getTime();
     }
     return 0;
@@ -30,13 +30,24 @@ export function sortDocuments(
 
 function compareVersions(v1: string, v2: string): number {
   const split = (v: string) => v.split(".").map(Number);
+
   const a = split(v1);
   const b = split(v2);
-  const len = Math.max(a.length, b.length);
-  for (let i = 0; i < len; i++) {
-    const n1 = a[i] ?? 0;
-    const n2 = b[i] ?? 0;
-    if (n1 !== n2) return n1 - n2;
+
+  const [aMajor, aMinor, aPatch] = a;
+  const [bMajor, bMinor, bPatch] = b;
+
+  if (aMajor !== bMajor) {
+    return aMajor - bMajor;
   }
+
+  if (aMinor !== bMinor) {
+    return aMinor - bMinor;
+  }
+
+  if (aPatch !== bPatch) {
+    return aPatch - bPatch;
+  }
+
   return 0;
 }

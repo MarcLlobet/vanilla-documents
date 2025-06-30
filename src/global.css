@@ -1,0 +1,96 @@
+:root {
+  /* Hue */
+  --key-color-h: 216;
+
+  /* Bright mode */
+  --key-color-l-bright: 24;
+  --highlight-color-l-bright: 48;
+  --highlight-color-soft-l-bright: 95;
+
+  --key-color-text-l-bright: 0;
+  --text-color-l-bright: 41;
+
+  --background-color-l-bright: 94;
+  --background-paper-l-bright: 100;
+  --highlight-color-mid-l-bright: 90;
+
+  /* Dark mode */
+  --key-color-l-dark: calc(100 - var(--key-color-l-bright));
+  --highlight-color-l-dark: calc(100 - var(--highlight-color-l-bright));
+  --highlight-color-soft-l-dark: calc(
+    100 - var(--highlight-color-soft-l-bright)
+  );
+
+  --key-color-text-l-dark: calc(100 - var(--key-color-text-l-bright));
+  --text-color-l-dark: calc(100 - var(--text-color-l-bright));
+
+  --background-color-l-dark: calc(100 - var(--background-color-l-bright));
+  --background-paper-l-dark: calc(100 - var(--background-paper-l-bright));
+  --highlight-color-mid-l-dark: calc(100 - var(--highlight-color-mid-l-bright));
+
+  /* Luminence */
+  --key-color-l: var(--key-color-l-bright);
+  --highlight-color-l: var(--highlight-color-l-bright);
+  --highlight-color-soft-l: var(--highlight-color-soft-l-bright);
+
+  --key-color-text-l: var(--key-color-text-l-bright);
+  --text-color-l: var(--text-color-l-bright);
+
+  --background-color-l: var(--background-color-l-bright);
+  --background-paper-l: var(--background-paper-l-bright);
+  --highlight-color-mid-l: var(--highlight-color-mid-l-bright);
+
+  /* Theme */
+  --key-color: hsl(var(--key-color-h) 23 var(--key-color-l));
+  --highlight-color: hsl(var(--key-color-h) 95 var(--highlight-color-l));
+  --highlight-color-soft: hsl(
+    var(--key-color-h) 100 var(--highlight-color-soft-l)
+  );
+
+  --key-color-text: hsl(0 0 var(--key-color-text-l));
+  --text-color: hsl(var(--key-color-h) 3 var(--text-color-l));
+
+  --background-color: hsl(var(--key-color-h) 20 var(--background-color-l));
+  --background-paper: hsl(0 0 var(--background-paper-l));
+  --highlight-color-mid: hsl(
+    var(--key-color-h) 42 var(--highlight-color-mid-l)
+  );
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family:
+    Inter var,
+    ui-sans-serif,
+    system-ui,
+    sans-serif,
+    Apple Color Emoji,
+    Segoe UI Emoji,
+    Segoe UI Symbol,
+    Noto Color Emoji;
+  font-feature-settings: normal;
+  font-variation-settings: normal;
+  line-height: 1.5;
+  font-weight: 400;
+  font-size: 14px;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  min-height: 100vh;
+  background: var(--background-color);
+  margin: 0;
+  color: var(--text-color);
+}
+
+#app {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
+}

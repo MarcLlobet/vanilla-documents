@@ -1,0 +1,21 @@
+.vd-add-document-btn {
+  width: 100%;
+  min-height: 60px;
+  background: var(--highlight-color-mid);
+  color: var(--highlight-color);
+  font-size: 1.15rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.7rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.vd-add-document-btn:hover,
+.vd-add-document-btn:focus {
+  background: var(--background-paper);
+  outline: 2px solid var(--highlight-color);
+}
