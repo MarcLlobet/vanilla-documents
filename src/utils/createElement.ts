@@ -19,6 +19,7 @@ type CreateElementProps = Partial<{
   disabled: boolean;
   alt: string;
   style: string;
+  "data-testid": string;
 }>;
 type CreateElementChild = Node | string;
 type CreateElement = (

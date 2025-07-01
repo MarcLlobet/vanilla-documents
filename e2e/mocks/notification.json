@@ -1,0 +1,32 @@
+{
+  "ID": "0fbd6f51-0608-4289-ad91-64ee96c77fc5",
+  "CreatedAt": "1914-03-09T20:47:58.475117157Z",
+  "UpdatedAt": "1979-06-22T18:38:30.524789068Z",
+  "Title": "Mock - Westmalle Trappist Tripel",
+  "Attachments": [
+    "Light Lager",
+    "European Amber Lager",
+    "Bock",
+    "Scottish And Irish Ale",
+    "Sour Ale"
+  ],
+  "Contributors": [
+    {
+      "ID": "0f9b9005-ede9-4be1-8019-51aeb778429f",
+      "Name": "Lindsey Wiegand"
+    },
+    {
+      "ID": "1ec7520e-5924-4b95-8a37-a7e3d6f9a398",
+      "Name": "Nadia Willms"
+    },
+    {
+      "ID": "3bbfe0ab-f35f-4332-b8d8-eb92072dbb06",
+      "Name": "Heath Spinka"
+    },
+    {
+      "ID": "f36b8220-b07a-4843-be64-b07a630e14d3",
+      "Name": "Joaquin Rutherford"
+    }
+  ],
+  "Version": "3.2.5"
+}

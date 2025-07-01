@@ -1,4 +1,5 @@
-yarn prettier --write .
-yarn eslint . --fix
-yarn ts:check
-yarn test
+pnpm prettier --write .
+pnpm eslint . --fix
+pnpm run ts:check
+pnpm run test
+pnpm run e2e

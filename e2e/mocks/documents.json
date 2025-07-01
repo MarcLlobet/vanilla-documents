@@ -1,0 +1,253 @@
+[
+  {
+    "ID": "3b2d549c-2efb-4740-82bf-05ac37b13164",
+    "CreatedAt": "2005-01-15T21:11:42.936684489Z",
+    "UpdatedAt": "1948-10-29T21:19:16.660508112Z",
+    "Title": "Mock - Edmund Fitzgerald Porter",
+    "Attachments": ["Belgian And French Ale", "Strong Ale"],
+    "Contributors": [
+      {
+        "ID": "4f058ee1-edd8-4dd9-bcf6-37cc77d679d4",
+        "Name": "Henry Lesch"
+      },
+      {
+        "ID": "44fcff16-84b8-4070-9cd2-c21c4548d38a",
+        "Name": "Mazie Schneider"
+      },
+      {
+        "ID": "96d99496-7181-4b7b-acfb-aa6a9de7bf19",
+        "Name": "Dillan Spinka"
+      },
+      {
+        "ID": "05bc24d5-ee40-4b87-af03-6fccc2e375bc",
+        "Name": "Jayne Hessel"
+      },
+      {
+        "ID": "cd2ef43e-ee2c-4b03-96a7-29ca80206cc1",
+        "Name": "Axel Greenfelder"
+      }
+    ],
+    "Version": "4.11.13"
+  },
+  {
+    "ID": "1a35bbdf-d2c2-4590-abac-d4cd2826bd05",
+    "CreatedAt": "1965-09-06T13:38:53.236211859Z",
+    "UpdatedAt": "1928-01-04T01:07:01.814278272Z",
+    "Title": "Mock - Oaked Arrogant Bastard Ale",
+    "Attachments": [
+      "Light Lager",
+      "German Wheat And Rye Beer",
+      "Wood-aged Beer"
+    ],
+    "Contributors": [
+      {
+        "ID": "9ea9dddc-3996-482f-8240-31f8ae05cba8",
+        "Name": "Verlie Hessel"
+      },
+      {
+        "ID": "de5081ba-55ed-4b16-bbf9-e18cc9b8197d",
+        "Name": "Taylor Metz"
+      },
+      {
+        "ID": "d15ee9e7-6084-41a5-b501-cb5c359ec7bd",
+        "Name": "Lamont Lind"
+      }
+    ],
+    "Version": "4.10.17"
+  },
+  {
+    "ID": "ca79a783-54fb-4a50-bc54-6e80a3629600",
+    "CreatedAt": "1958-03-17T06:07:27.261078935Z",
+    "UpdatedAt": "1965-05-27T01:09:21.55619871Z",
+    "Title": "Mock - Dreadnaught IPA",
+    "Attachments": ["Wood-aged Beer", "Merican Ale", "Belgian Strong Ale"],
+    "Contributors": [
+      {
+        "ID": "206fc415-3715-4e7b-9879-647e9f916e63",
+        "Name": "Nia Krajcik"
+      },
+      {
+        "ID": "b6af53ed-f3d3-4b50-8f7b-4be634cfe355",
+        "Name": "Gennaro Schiller"
+      }
+    ],
+    "Version": "1.14.11"
+  },
+  {
+    "ID": "0d9da8f7-0771-4d75-ba20-4b5715af697a",
+    "CreatedAt": "2005-06-23T16:13:43.988732958Z",
+    "UpdatedAt": "1912-10-24T03:20:53.086570983Z",
+    "Title": "Mock - Weihenstephaner Hefeweissbier",
+    "Attachments": ["Amber Hybrid Beer", "India Pale Ale", "Fruit Beer"],
+    "Contributors": [
+      {
+        "ID": "f4f34ab7-a723-48b1-b712-9157d9ab6dc3",
+        "Name": "Samara King"
+      },
+      {
+        "ID": "2ba4c94c-45af-48a5-8d76-cd2d36344e6d",
+        "Name": "Melissa Miller"
+      },
+      {
+        "ID": "d6a23116-11d2-4c05-bb9b-c683884d2c88",
+        "Name": "Daphnee Leannon"
+      }
+    ],
+    "Version": "1.15.3"
+  },
+  {
+    "ID": "9042b042-e9b7-4d27-a2c0-73aa3904a5e7",
+    "CreatedAt": "1996-12-29T09:36:42.664327201Z",
+    "UpdatedAt": "1903-12-09T19:54:28.758309683Z",
+    "Title": "Mock - Alpha King Pale Ale",
+    "Attachments": ["Pilsner", "Amber Hybrid Beer", "English Brown Ale"],
+    "Contributors": [
+      {
+        "ID": "ee7a9f3a-1752-4b0b-9932-c2959d7ba907",
+        "Name": "Marc Huel"
+      },
+      {
+        "ID": "2b19c819-22c8-475b-9da4-74a01d3aadbe",
+        "Name": "Ana Gislason"
+      }
+    ],
+    "Version": "2.4.17"
+  },
+  {
+    "ID": "e149eb2a-6580-4ff8-987a-1414e9687ac7",
+    "CreatedAt": "2002-04-14T08:20:25.763047855Z",
+    "UpdatedAt": "2021-09-15T01:35:54.074065697Z",
+    "Title": "Mock - Bell’s Expedition",
+    "Attachments": [
+      "Wood-aged Beer",
+      "Fruit Beer",
+      "Scottish And Irish Ale",
+      "Smoke-flavored"
+    ],
+    "Contributors": [
+      {
+        "ID": "2ae28064-0617-4998-bdf5-c6a6e11892ef",
+        "Name": "Joanne Breitenberg"
+      },
+      {
+        "ID": "d0db1317-1261-47a8-a6d8-9e79ae01da1e",
+        "Name": "Charles Rolfson"
+      },
+      {
+        "ID": "b3c1ddd5-6567-4d0e-ba31-f18f9904b376",
+        "Name": "Viva Gutkowski"
+      },
+      {
+        "ID": "0ac8c86b-9069-4a74-8aad-0cefc6c4400b",
+        "Name": "Ashlynn Orn"
+      }
+    ],
+    "Version": "3.2.13"
+  },
+  {
+    "ID": "c14fa14e-0aba-4e01-a85d-b438bc92bd60",
+    "CreatedAt": "1925-01-28T10:20:57.288739659Z",
+    "UpdatedAt": "1922-02-11T14:35:56.489493814Z",
+    "Title": "Mock - 90 Minute IPA",
+    "Attachments": [
+      "Wood-aged Beer",
+      "Stout",
+      "Belgian And French Ale",
+      "Light Hybrid Beer",
+      "English Brown Ale"
+    ],
+    "Contributors": [
+      {
+        "ID": "0e95d0a2-1def-43a4-8adb-569e472c1f81",
+        "Name": "Birdie Johnson"
+      },
+      {
+        "ID": "96d75250-01d1-413f-a4e9-e5f43a65934d",
+        "Name": "Annetta Brown"
+      },
+      {
+        "ID": "5c8ee9e2-1ed6-483f-942f-3ce418bf57cb",
+        "Name": "Jordane Schamberger"
+      },
+      {
+        "ID": "f495e0fd-206d-44bd-89de-6318f9911ca8",
+        "Name": "Rosina Ritchie"
+      }
+    ],
+    "Version": "1.19.3"
+  },
+  {
+    "ID": "d90c7b82-4401-44df-af2b-9d3a0a68dd49",
+    "CreatedAt": "1958-02-22T08:44:29.250412949Z",
+    "UpdatedAt": "1980-03-10T12:44:36.455215406Z",
+    "Title": "Mock - Samuel Smith’s Oatmeal Stout",
+    "Attachments": ["Strong Ale", "Light Lager"],
+    "Contributors": [
+      {
+        "ID": "2dae8811-d596-4f15-b02e-2f19a397bcc4",
+        "Name": "Douglas Roob"
+      },
+      {
+        "ID": "cf2f885e-c96c-4f68-8fbe-5936769c5507",
+        "Name": "Cindy Prohaska"
+      }
+    ],
+    "Version": "3.4.1"
+  },
+  {
+    "ID": "2b6f6136-0ba8-4817-ac83-1d81f8b20833",
+    "CreatedAt": "1904-01-20T22:34:34.657473317Z",
+    "UpdatedAt": "1951-10-30T04:54:46.406092147Z",
+    "Title": "Mock - Sublimely Self-Righteous Ale",
+    "Attachments": ["Fruit Beer", "Stout", "English Pale Ale"],
+    "Contributors": [
+      {
+        "ID": "4e4b58a7-90a2-4bc2-81f9-7f5c9ede92ad",
+        "Name": "Perry Mitchell"
+      },
+      {
+        "ID": "01ce4226-93d6-435b-9bc8-c32e480aa506",
+        "Name": "Theo Veum"
+      },
+      {
+        "ID": "728d6dda-43c1-4809-a183-9b4e25b6b4a4",
+        "Name": "Shyanne Jones"
+      },
+      {
+        "ID": "60a3c2f6-005d-4628-bb19-b67eaac6c426",
+        "Name": "Esmeralda Bauch"
+      }
+    ],
+    "Version": "3.8.4"
+  },
+  {
+    "ID": "59865339-2309-415a-9e26-5c400c709a3b",
+    "CreatedAt": "1923-12-14T11:38:49.228607692Z",
+    "UpdatedAt": "1915-12-03T04:41:52.31372848Z",
+    "Title": "Mock - Oak Aged Yeti Imperial Stout",
+    "Attachments": ["Pilsner", "German Wheat And Rye Beer", "India Pale Ale"],
+    "Contributors": [
+      {
+        "ID": "fa30b2d4-1c11-4773-aa17-aa9b799bd829",
+        "Name": "Jamil Flatley"
+      },
+      {
+        "ID": "5258c0b8-60bd-4b07-824e-8bedc0e30adf",
+        "Name": "Maximo Hammes"
+      },
+      {
+        "ID": "967fb022-08a5-4b45-83d4-492c0d69bc4e",
+        "Name": "Nikita Kub"
+      },
+      {
+        "ID": "a6617451-aec4-49df-872d-d175232fa269",
+        "Name": "Mervin Ebert"
+      },
+      {
+        "ID": "94652b09-b1e1-4f8f-a220-132187f6f1ff",
+        "Name": "Everette Schmitt"
+      }
+    ],
+    "Version": "4.1.13"
+  }
+]

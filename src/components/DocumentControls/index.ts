@@ -69,6 +69,7 @@ export function DocumentControls({
     createElement(
       {
         type: "button",
+        "data-testid": "sort--asc",
         disabled: sortOrder === "asc",
         className: [
           "vd-doc__header-button",
@@ -85,6 +86,7 @@ export function DocumentControls({
     createElement(
       {
         type: "button",
+        "data-testid": "sort--desc",
         disabled: sortOrder === "desc",
         className: [
           "vd-doc__header-button",

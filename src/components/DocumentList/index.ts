@@ -93,6 +93,7 @@ export function DocumentList({
 
   const listBody = createElement({
     id: "list-body",
+    "data-testid": "list-body",
     className: "vd-doc-list",
   });
 
