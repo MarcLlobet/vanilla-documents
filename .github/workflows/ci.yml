@@ -1,0 +1,39 @@
+name: CI Checks
+
+on:
+  push:
+  pull_request:
+    branches:
+      - "*"
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 🛠️ Checkout code
+        uses: actions/checkout@v4
+
+      - name: 🔧 Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: "pnpm"
+
+      - name: 📦 Install dependencies
+        run: pnpm install
+
+      - name: 🎨 Prettier check
+        run: pnpm prettier --check .
+
+      - name: 🧹 ESLint check
+        run: pnpm eslint .
+
+      - name: 🛡️ TypeScript check
+        run: pnpm run ts:check
+
+      - name: ✅ Run tests
+        run: pnpm run test
+
+      - name: ✅ Run e2e tests
+        run: pnpm run e2e
