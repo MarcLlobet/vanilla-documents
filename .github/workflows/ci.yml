@@ -12,9 +12,11 @@ jobs:
       - name: 🛠️ Checkout code
         uses: actions/checkout@v4
 
-      - uses: pnpm/action-setup@v2
+      - uses: pnpm/action-setup@v4
+        name: 📦 Install pnpm
         with:
-          version: 6.32.9
+          version: latest
+          run_install: false
 
       - name: 🔧 Setup Node.js
         uses: actions/setup-node@v4
