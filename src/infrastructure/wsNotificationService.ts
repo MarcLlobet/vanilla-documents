@@ -1,14 +1,17 @@
-import type {
-  DocumentNotification,
-  NotificationService,
-} from "../domain/documentRepository";
+import type { Document } from "../domain/document";
+export interface NotificationService {
+  onNewDocument(_callback: (_notification: Document) => void): void;
+}
 
 export class WsNotificationService implements NotificationService {
-  private ws: WebSocket | null = null;
-  onNewDocument(callback: (_notification: DocumentNotification) => void): void {
+  ws: WebSocket;
+  constructor() {
     this.ws = new WebSocket("ws://localhost:8080/notifications");
+  }
+
+  onNewDocument(callback: (_notification: Document) => void): void {
     this.ws.onmessage = (event) => {
-      const notif = JSON.parse(event.data);
+      const notif: Document = JSON.parse(event.data);
       callback(notif);
     };
   }

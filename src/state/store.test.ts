@@ -1,4 +1,4 @@
-import { describe, it, expect } from "vitest";
+import { describe, it, expect, beforeEach } from "vitest";
 import { reducer, initialState, createStore } from "./store";
 import type { Document } from "../domain/document";
 
@@ -72,19 +72,27 @@ describe("reducer", () => {
 });
 
 describe("createStore", () => {
+  const store = createStore(initialState);
+  beforeEach(() => {
+    store.resetState();
+  });
+
   it("getState returns initial", () => {
-    const store = createStore(initialState);
     expect(store.getState()).toEqual(initialState);
   });
 
   it("dispatch updates state", () => {
-    const store = createStore(initialState);
     store.dispatch({ type: "setSortKey", payload: "Title" });
     expect(store.getState().sortKey).toBe("Title");
   });
 
+  it("resets state", () => {
+    store.dispatch({ type: "setSortKey", payload: "Version" });
+    store.resetState();
+    expect(store.getState()).toEqual(initialState);
+  });
+
   it("subscribe is called on state change", () => {
-    const store = createStore(initialState);
     let called = false;
     store.subscribe(() => {
       called = true;
@@ -94,7 +102,6 @@ describe("createStore", () => {
   });
 
   it("unsubscribe removes listener", () => {
-    const store = createStore(initialState);
     let called = 0;
     const unsub = store.subscribe(() => {
       called++;

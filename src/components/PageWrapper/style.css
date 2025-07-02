@@ -4,14 +4,16 @@
   display: flex;
   width: 100%;
   gap: 1rem;
+  justify-content: flex-start;
+  flex-direction: column;
 }
 
-.vd-page-wrapper--left {
-  justify-content: flex-start;
-}
 .vd-page-wrapper--center {
   justify-content: center;
 }
 .vd-page-wrapper--right {
   justify-content: flex-end;
+}
+.vd-page-wrapper--row {
+  flex-direction: row;
 }

@@ -251,3 +251,5 @@ export function DocumentForm({
 
   return formWrapper;
 }
+
+export default DocumentForm;

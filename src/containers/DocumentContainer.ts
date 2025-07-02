@@ -1,12 +1,13 @@
 import {
   DocumentControls,
   DocumentList,
-  DocumentForm,
   AddDocumentButton,
   addDocumentRow,
 } from "../components";
-import { store } from "../state/store";
 import { sortDocuments } from "../application/sortDocuments";
+import { Container } from ".";
+import { Store } from "../state/store";
+import { createElement } from "../utils";
 
 const SORT_OPTIONS = [
   { key: "Title", label: "Name" },
@@ -24,15 +25,19 @@ const getFullDate = () => {
   return `${year}-${month}-${day}`;
 };
 
-const addArea = () => {
+const addArea = (store: Store) => {
   const addButton = AddDocumentButton({
     label: "+ Add document",
     onClick: () => handleAddButtonClick(),
   });
 
-  const handleAddButtonClick = () => {
+  const handleAddButtonClick = async () => {
     const listBody = addButton.closest("#list-body");
     const addButtonRow = addButton.closest(".vd-doc-list__row--add");
+
+    const DocumentForm = await import("../components/DocumentForm").then(
+      (mod) => mod.DocumentForm,
+    );
 
     const documentForm = DocumentForm({
       onSubmit: (documentData) => {
@@ -59,8 +64,10 @@ const addArea = () => {
   return addButton;
 };
 
-export const DocumentContainer = () => {
-  const container = document.createElement("div");
+export const DocumentContainer: Container = (store) => {
+  const container = createElement({
+    className: "document-wrapper",
+  });
 
   const renderControls = () => {
     const state = store.getState();
@@ -101,7 +108,7 @@ export const DocumentContainer = () => {
     const documentList = DocumentList({
       documentListId: "documentList",
       documents: sortedDocs,
-      addArea: () => addArea(),
+      addArea: () => addArea(store),
       viewMode: state.viewMode,
     });
 

@@ -3,6 +3,10 @@ import type { Document } from "../domain/document";
 export type SortKey = "Title" | "Version" | "UpdatedAt";
 export type SortOrder = "asc" | "desc";
 export type ViewMode = "list" | "grid";
+export type Alert = {
+  message: string;
+  date: Date;
+};
 
 export type AppState = {
   sortKey: SortKey;
@@ -11,6 +15,7 @@ export type AppState = {
   notificationCount: number;
   documents: Document[];
   notificatedDocuments: Document[];
+  alerts: Alert[];
 };
 
 export const initialState: AppState = {
@@ -20,6 +25,7 @@ export const initialState: AppState = {
   notificationCount: 0,
   documents: [],
   notificatedDocuments: [],
+  alerts: [],
 };
 
 export type Action =
@@ -29,7 +35,8 @@ export type Action =
   | { type: "setDocuments"; payload: Document[] }
   | { type: "addDocument"; payload: Document }
   | { type: "addNotificatedDocument"; payload: Document }
-  | { type: "clearNotificatedDocuments" };
+  | { type: "clearNotificatedDocuments" }
+  | { type: "addAlert"; payload: Alert };
 
 export function reducer(state: AppState, action: Action): AppState {
   switch (action.type) {
@@ -51,6 +58,8 @@ export function reducer(state: AppState, action: Action): AppState {
       };
     case "clearNotificatedDocuments":
       return { ...state, notificatedDocuments: [], notificationCount: 0 };
+    case "addAlert":
+      return { ...state, alerts: [...state.alerts, action.payload] };
     default:
       return state;
   }
@@ -58,28 +67,41 @@ export function reducer(state: AppState, action: Action): AppState {
 
 export type StateListener = (_state: AppState, _prevState: AppState) => void;
 
-export function createStore(initial: AppState) {
+export type Store = {
+  getState: () => AppState;
+  dispatch: (_action: Action) => void;
+  subscribe: (_fn: StateListener) => () => void;
+  resetState: () => void;
+};
+
+export type CreateStore = (_state: AppState) => Store;
+
+export const createStore: CreateStore = (initial: AppState) => {
   let state = initial;
   let listeners: StateListener[] = [];
 
-  function getState() {
+  const getState = () => {
     return state;
-  }
+  };
 
-  function dispatch(action: Action) {
+  const dispatch = (action: Action) => {
     const prev = state;
     state = reducer(state, action);
     if (prev !== state) listeners.forEach((fn) => fn(state, prev));
-  }
+  };
 
-  function subscribe(fn: StateListener) {
+  const subscribe = (fn: StateListener) => {
     listeners.push(fn);
     return () => {
       listeners = listeners.filter((l) => l !== fn);
     };
-  }
+  };
 
-  return { getState, dispatch, subscribe };
-}
+  const resetState = () => {
+    state = initial;
+  };
 
-export const store = createStore(initialState);
+  return { getState, dispatch, subscribe, resetState };
+};
+
+export const store: Store = createStore(initialState);

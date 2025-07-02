@@ -3,7 +3,7 @@ import { Title } from "./index";
 
 describe("Title", () => {
   it("renders h1 with text", () => {
-    const el = Title("My Title");
-    expect(el.querySelector("h1")?.textContent).toBe("My Title");
+    const el = Title();
+    expect(el.querySelector("h1")?.textContent).toBe("Documents");
   });
 });

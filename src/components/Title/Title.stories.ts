@@ -3,21 +3,15 @@ import { createElement } from "../../utils";
 
 export default {
   title: "Components/Typography",
-  argTypes: {
-    title: { control: "text" },
-  },
-  defaultValue: {
-    title: "Main title",
-  },
 };
 
-export const Default = (args: { title: string }) =>
+export const Default = () =>
   createElement(
     {
       style:
         "display: flex; flex-direction: column; justify-content: flex-start;",
     },
-    Title(args.title ?? "Main title"),
+    Title(),
     createElement(
       {
         type: "label",

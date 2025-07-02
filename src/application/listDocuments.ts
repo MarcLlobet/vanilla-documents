@@ -1,4 +1,5 @@
-import type { Document, DocumentRepository } from "../domain/document";
+import type { Document } from "../domain/document";
+import type { DocumentRepository } from "../infrastructure/httpDocumentRepository";
 
 export class ListDocuments {
   constructor(private repo: DocumentRepository) {

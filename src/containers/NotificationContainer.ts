@@ -1,5 +1,5 @@
-import { Notification, PageWrapper } from "../components";
-import { store } from "../state/store";
+import { Container } from ".";
+import { Notification } from "../components";
 import { createElement } from "../utils";
 
 type RenderProps = {
@@ -7,19 +7,15 @@ type RenderProps = {
   onClick: () => void;
 };
 
-export const NotificationContainer = () => {
-  const container = document.createElement("div");
+export const NotificationContainer: Container = (store) => {
+  const container = createElement({
+    className: "doc-app",
+  });
 
   const render = ({ notificationCount, onClick }: RenderProps) => {
-    container.innerHTML = "";
     const notifContainer = createElement({
       id: "notification-area",
     });
-    const notificationWrapper = PageWrapper({
-      children: notifContainer,
-      align: "center",
-    });
-    notificationWrapper.classList.add("doc-app");
 
     if (notificationCount > 0) {
       const notif = Notification({
@@ -31,7 +27,13 @@ export const NotificationContainer = () => {
       notifContainer.appendChild(notif);
     }
 
-    container.appendChild(notificationWrapper);
+    const oldNotifications = container.querySelector("#notification-area");
+
+    if (!oldNotifications) {
+      container.appendChild(notifContainer);
+    } else {
+      oldNotifications.replaceWith(notifContainer);
+    }
   };
 
   const onClick = () => {

@@ -1,4 +1,9 @@
-import type { Document, DocumentRepository } from "../domain/document";
+import type { Document } from "../domain/document";
+
+export type DocumentRepository = {
+  getAll(): Promise<Document[]>;
+  add(_document: Document): Promise<void>;
+};
 
 export class HttpDocumentRepository implements DocumentRepository {
   private memory: Document[] = [];

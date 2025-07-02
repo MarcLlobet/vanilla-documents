@@ -1,0 +1,58 @@
+.vd-alert-wrapper {
+  position: fixed;
+  bottom: 50px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 0.5rem;
+}
+.vd-alert-row {
+  width: 100%;
+  justify-content: center;
+  display: flex;
+  transition:
+    margin-bottom 1s,
+    opacity 0.5s;
+  animation-delay: 3s;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  animation-name: delayHide;
+}
+
+@keyframes delayHide {
+  to {
+    margin-bottom: -59px;
+    opacity: 0;
+  }
+}
+
+.vd-alert {
+  background: var(--key-color);
+  color: #fff;
+  padding: 0.8rem 2rem;
+  border-radius: 10px;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: fit-content;
+  transition:
+    color 0.2s,
+    border 0.2s;
+}
+
+.vd-alert__img {
+  display: flex;
+}
+
+.vd-alert__icon {
+  font-size: 1.4rem;
+  display: inline-flex;
+}
+.vd-alert__text {
+  font-weight: 600;
+  display: inline-flex;
+}

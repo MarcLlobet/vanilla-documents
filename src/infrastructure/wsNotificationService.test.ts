@@ -1,6 +1,6 @@
 import { describe, it, expect, vi } from "vitest";
 import { WsNotificationService } from "./wsNotificationService";
-import type { DocumentNotification } from "../domain/documentRepository";
+import { Document } from "../domain/document";
 
 vi.spyOn(globalThis, "WebSocket").mockImplementation(
   function mockWebSocket(url) {
@@ -22,7 +22,7 @@ vi.spyOn(globalThis, "WebSocket").mockImplementation(
 describe("WsNotificationService", () => {
   it("calls callback on new document", () => {
     const service = new WsNotificationService();
-    const notif: DocumentNotification = {
+    const notif: Document = {
       ID: "1",
       Title: "Doc",
       Version: "1.0.0",

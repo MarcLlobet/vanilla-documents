@@ -1,25 +1,31 @@
+import { createElement } from "../../utils";
 import "./style.css";
 
-export interface PageWrapperProps {
-  children: HTMLElement | HTMLElement[];
+export type PageWrapperProps = {
   align?: "left" | "center" | "right";
-}
+  direction?: "row" | "column";
+};
+export type PageWrapperChildren = HTMLElement | Node;
 
-export function PageWrapper({
-  children,
-  align,
-}: PageWrapperProps): HTMLElement {
-  const wrapper = document.createElement("div");
-  wrapper.classList.add("vd-page-wrapper");
+type PageWrapper = (
+  _arg0: PageWrapperProps,
+  ..._arg1: PageWrapperChildren[]
+) => HTMLElement;
 
-  if (align) {
+export const pageWrapper: PageWrapper = ({ align, direction }, ...children) => {
+  const wrapper = createElement({
+    className: "vd-page-wrapper",
+  });
+
+  if (direction && direction !== "column") {
+    wrapper.classList.add(`vd-page-wrapper--${direction}`);
+  }
+
+  if (align && align !== "left") {
     wrapper.classList.add(`vd-page-wrapper--${align}`);
   }
 
-  if (Array.isArray(children)) {
-    wrapper.append(...children);
-  } else {
-    wrapper.appendChild(children);
-  }
+  wrapper.append(...children);
+
   return wrapper;
-}
+};

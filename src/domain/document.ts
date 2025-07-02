@@ -12,9 +12,4 @@ export type Document = {
   Contributors: Contributor[];
 };
 
-export interface DocumentRepository {
-  getAll(): Promise<Document[]>;
-  add(_document: Document): Promise<void>;
-}
-
 export {};

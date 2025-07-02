@@ -1,6 +1,7 @@
 import { describe, it, expect } from "vitest";
 import { ListDocuments } from "./listDocuments";
-import type { Document, DocumentRepository } from "../domain/document";
+import type { Document } from "../domain/document";
+import type { DocumentRepository } from "../infrastructure/httpDocumentRepository";
 
 const docs: Document[] = [
   {

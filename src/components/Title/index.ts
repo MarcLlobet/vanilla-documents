@@ -1,8 +1,7 @@
 import { createElement } from "../../utils";
-import { PageWrapper } from "../PageWrapper";
 import "./style.css";
 
-export function Title(title: string): HTMLElement {
+export function Title(): HTMLElement {
   const header = createElement(
     {
       type: "header",
@@ -13,11 +12,9 @@ export function Title(title: string): HTMLElement {
         type: "h1",
         className: `vd-title`,
       },
-      title,
+      "Documents",
     ),
   );
 
-  return PageWrapper({
-    children: header,
-  });
+  return header;
 }

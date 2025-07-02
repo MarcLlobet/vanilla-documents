@@ -1,5 +1,5 @@
 import { createElement } from "../../utils";
-import { PageWrapper, PageWrapperProps } from "./index";
+import { pageWrapper, PageWrapperProps } from "./index";
 
 const example = createElement(
   createElement(
@@ -16,18 +16,25 @@ const example = createElement(
   ),
 );
 
-example.style.border = "5px solid red";
 example.style.width = "200px";
+example.style.border = "5px solid red";
+
+const example2 = example.cloneNode(true) as HTMLElement;
+example2.style.border = "5px solid green";
 
 export default {
   title: "Components/PageWrapper",
   argTypes: {
-    align: { control: "select", options: ["left", "center", "right"] },
+    align: { control: "radio", options: ["left", "center", "right"] },
+    direction: { control: "radio", options: ["row", "column"] },
   },
 };
 
 export const Default = (args: PageWrapperProps) =>
-  PageWrapper({
-    ...args,
-    children: example,
-  });
+  pageWrapper(
+    {
+      ...args,
+    },
+    example,
+    example2,
+  );

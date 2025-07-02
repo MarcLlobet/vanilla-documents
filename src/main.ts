@@ -1,52 +1,63 @@
 import "./global.css";
-import { HttpDocumentRepository } from "./infrastructure/httpDocumentRepository";
-import { WsNotificationService } from "./infrastructure/wsNotificationService";
-import { ListDocuments } from "./application/listDocuments";
-import { NotificationContainer } from "./containers/NotificationContainer";
-import { DocumentContainer } from "./containers/DocumentContainer";
-import type { Document } from "./domain/document";
+import {
+  NotificationContainer,
+  DocumentContainer,
+  PageContainer,
+  AlertContainer,
+  ServicesContainer,
+} from "./containers";
 import { store } from "./state/store";
-import { Title } from "./components/Title";
-import { ColorSlider, DarkModeButton } from "./components/ThemeMode";
-import { PageWrapper } from "./components";
+import { Title, ColorSlider, DarkModeButton } from "./components";
 
 const appRoot = document.querySelector<HTMLDivElement>("#app")!;
-const repo = new HttpDocumentRepository();
-const wsService = new WsNotificationService();
-const listDocuments = new ListDocuments(repo);
-
-listDocuments.execute().then((docs) => {
-  store.dispatch({ type: "setDocuments", payload: docs });
-  renderApp();
-});
-
-wsService.onNewDocument((docNotif) => {
-  const doc: Document = {
-    ID: docNotif.ID,
-    Title: docNotif.Title,
-    Version: docNotif.Version,
-    CreatedAt: docNotif.CreatedAt,
-    UpdatedAt: docNotif.UpdatedAt,
-    Attachments: docNotif.Attachments,
-    Contributors: docNotif.Contributors,
-  };
-  const state = store.getState();
-  if (
-    !state.documents.some((d) => d.ID === doc.ID) &&
-    !state.notificatedDocuments.some((d) => d.ID === doc.ID)
-  ) {
-    store.dispatch({ type: "addNotificatedDocument", payload: doc });
-  }
-});
 
 function renderApp() {
-  appRoot.append(
-    PageWrapper({
-      children: [ColorSlider(), DarkModeButton()],
-      align: "right",
-    }),
+  ServicesContainer(store);
+
+  return appRoot.append(
+    PageContainer(
+      {
+        name: "Theme",
+        align: "right",
+        direction: "row",
+        store,
+      },
+      ColorSlider,
+      DarkModeButton,
+    ),
+    PageContainer(
+      {
+        name: "Notifications",
+        align: "center",
+        direction: "row",
+        store,
+      },
+      NotificationContainer,
+    ),
+    PageContainer(
+      {
+        name: "Title",
+        align: "left",
+        store,
+      },
+      Title,
+    ),
+    PageContainer(
+      {
+        name: "Documents",
+        align: "left",
+        store,
+      },
+      DocumentContainer,
+    ),
+    PageContainer(
+      {
+        name: "Alerts",
+        store,
+      },
+      AlertContainer,
+    ),
   );
-  appRoot.appendChild(NotificationContainer());
-  appRoot.appendChild(Title("Documents"));
-  appRoot.appendChild(DocumentContainer());
 }
+
+renderApp();
