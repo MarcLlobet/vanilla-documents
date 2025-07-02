@@ -13,10 +13,6 @@
   flex-direction: row;
   gap: 0.2rem;
 }
-.vd-doc-list__sort-label {
-}
-.vd-doc-list__sort-input {
-}
 
 .vd-doc__header-button {
   cursor: pointer;
