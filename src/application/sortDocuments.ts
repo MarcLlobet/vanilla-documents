@@ -1,4 +1,4 @@
-import type { Document } from "../domain/document";
+import type { Document } from "./document";
 
 export type SortOrder = "asc" | "desc";
 

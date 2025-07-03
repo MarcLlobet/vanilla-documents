@@ -1,4 +1,4 @@
-import type { Document } from "../domain/document";
+import type { Document } from "../application/document";
 export interface NotificationService {
   onNewDocument(_callback: (_notification: Document) => void): void;
 }

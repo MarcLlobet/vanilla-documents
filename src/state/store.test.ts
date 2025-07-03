@@ -1,6 +1,6 @@
 import { describe, it, expect, beforeEach } from "vitest";
 import { reducer, initialState, createStore } from "./store";
-import type { Document } from "../domain/document";
+import type { Document } from "../application/document";
 
 const doc: Document = {
   ID: "1",

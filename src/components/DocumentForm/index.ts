@@ -1,6 +1,6 @@
 import "./style.css";
 import { createElement } from "../../utils";
-import { Contributor, Document } from "../../domain/document";
+import { Contributor, Document } from "../../application/document";
 
 export type DocumentFormProps = {
   onSubmit: (_data: {

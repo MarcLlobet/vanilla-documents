@@ -1,7 +1,7 @@
 import { describe, it, expect, vi, beforeEach } from "vitest";
 import { DocumentContainer } from "./DocumentContainer";
 import { createStore, initialState } from "../state/store";
-import { Document } from "../domain/document";
+import { Document } from "../application/document";
 
 describe("DocumentContainer", () => {
   const store = createStore(initialState);

@@ -1,6 +1,6 @@
 import { describe, it, expect } from "vitest";
 import { DocumentList, addDocumentRow } from "./index";
-import type { Document } from "../../domain/document";
+import type { Document } from "../../application/document";
 
 const doc: Document = {
   ID: "1",

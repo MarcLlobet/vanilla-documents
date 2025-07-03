@@ -1,6 +1,6 @@
 import { describe, it, expect } from "vitest";
 import { sortDocuments } from "./sortDocuments";
-import type { Document } from "../domain/document";
+import type { Document } from "./document";
 
 const docs: Document[] = [
   {

@@ -1,6 +1,6 @@
 import "./style.css";
 import { createElement } from "../../utils";
-import { Document } from "../../domain/document";
+import { Document } from "../../application/document";
 import ArrowUpSvg from "./arrow-up.svg";
 import ArrowDownSvg from "./arrow-down.svg";
 import ListSvg from "./list.svg";

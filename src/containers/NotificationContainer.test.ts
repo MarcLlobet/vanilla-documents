@@ -1,7 +1,7 @@
 import { describe, it, expect, vi, beforeEach } from "vitest";
 import { NotificationContainer } from "./NotificationContainer";
 import { createStore, initialState } from "../state/store";
-import { Document } from "../domain/document";
+import { Document } from "../application/document";
 
 const store = createStore(initialState);
 

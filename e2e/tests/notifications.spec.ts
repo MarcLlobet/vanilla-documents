@@ -2,7 +2,7 @@ import { expect } from "@playwright/test";
 import { test } from "../setup";
 import { getNotification, getDocuments } from "../mocks";
 
-test.describe.skip("Notifications", () => {
+test.describe("Notifications", () => {
   test.beforeEach(async ({ page }) => {
     await page.goto("/");
   });

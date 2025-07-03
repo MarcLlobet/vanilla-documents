@@ -1,5 +1,5 @@
 import { DocumentList, DocumentListProps } from "./index";
-import type { Document } from "../../domain/document";
+import type { Document } from "../../application/document";
 import { createElement } from "../../utils";
 
 const mockDocs: Document[] = [

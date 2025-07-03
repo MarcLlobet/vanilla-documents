@@ -1,6 +1,6 @@
 import { describe, it, expect, vi, beforeEach } from "vitest";
 import { HttpDocumentRepository } from "./httpDocumentRepository";
-import type { Document } from "../domain/document";
+import type { Document } from "../application/document";
 
 const docs: Document[] = [
   {

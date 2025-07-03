@@ -1,4 +1,4 @@
-import type { Document } from "../domain/document";
+import type { Document } from "../application/document";
 
 export type SortKey = "Title" | "Version" | "UpdatedAt";
 export type SortOrder = "asc" | "desc";

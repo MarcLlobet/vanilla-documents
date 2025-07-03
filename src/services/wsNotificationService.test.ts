@@ -1,6 +1,6 @@
 import { describe, it, expect, vi } from "vitest";
 import { WsNotificationService } from "./wsNotificationService";
-import { Document } from "../domain/document";
+import { Document } from "../application/document";
 
 vi.spyOn(globalThis, "WebSocket").mockImplementation(
   function mockWebSocket(url) {

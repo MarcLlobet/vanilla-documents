@@ -1,7 +1,7 @@
 import { ListDocuments } from "../application/listDocuments";
-import { Document } from "../domain/document";
-import { HttpDocumentRepository } from "../infrastructure/httpDocumentRepository";
-import { WsNotificationService } from "../infrastructure/wsNotificationService";
+import { Document } from "../application/document";
+import { HttpDocumentRepository } from "../services/httpDocumentRepository";
+import { WsNotificationService } from "../services/wsNotificationService";
 import { Store } from "../state/store";
 
 export const documentsService = (store: Store) => {
