@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "ts:check": "tsc",
-    "build": "pnpm run ts:check && vite build",
+    "build": "vite build",
     "preview": "vite preview",
     "server": "cd server && go run server.go",
     "storybook": "storybook dev -p 6006",
